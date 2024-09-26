@@ -6,6 +6,8 @@ import MainHeader from "../../components/layout/header/mainHeader"
 import MainFooter from '../../components/layout/footer/mainFooter'
 import SubFooter from '../../components/layout/footer/subFooter'
 import TopFooter from '../../components/layout/footer/topFooter'
+import AllCategories from '../../components/categories/allCategories'
+import Products from '../../components/products'
 
 
 const HomePage = () => {
@@ -13,6 +15,9 @@ const HomePage = () => {
     <div>
       <SubHeader/>
       <MainHeader/>
+
+      <AllCategories/>
+      <Products/>
 
 
       <TopFooter/>
