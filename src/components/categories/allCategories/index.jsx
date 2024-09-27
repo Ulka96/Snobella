@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import SingleCategory from '../singleCategory';
 import Container from '../../common/containerClass';
 import Slider from 'react-slick';
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import chevronleft from "../../../assets/home/icons/chevronleft.png"
 
@@ -21,7 +22,7 @@ const AllCategories = () => {
     }, [])
 
   const settings = {
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -32,11 +33,11 @@ const AllCategories = () => {
   };
 
   // Function to slide to the last category
-//   const slideToLast = () => {
-//     if (sliderRef.current) {
-//       sliderRef.current.slickGoTo(categories.length - 1);
-//     }
-//   };
+  const slideToLast = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrevious();
+    }
+  };
 
   // Function to start sliding (to the right)
   const startSliding = () => {
@@ -48,14 +49,22 @@ const AllCategories = () => {
   return (
     <Container>
       <div className="flex justify-between items-center mb-4 relative ">
-        {/* <button onClick={slideToLast}>Slide to Last Category</button> */}
-        {categories.length > 4 && (
+        <button
+          onClick={slideToLast}
+          className="absolute top-[100px] left-0 z-10">
+          <div className="border border-[#EBEBEB] rounded-full w-8 h-8">
+            <img src={chevronleft} alt="chevronleft" />
+          </div>
+        </button>
 
-          <button onClick={startSliding} className="ml-4 absolute top-[100px] right-0 z-10">
-            <div className='border border-[#EBEBEB] rounded-full w-8 h-8'>
-             <img src={chevronleft} alt="chevronleft" />
+        {categories.length > 4 && (
+          <button
+            onClick={startSliding}
+            className="ml-4 absolute top-[100px] right-0 z-10">
+            <div className="border border-[#EBEBEB] rounded-full w-8 h-8">
+              <img src={chevronleft} alt="chevronleft" />
             </div>
-            </button>
+          </button>
         )}
       </div>
       <Slider ref={sliderRef} {...settings}>
