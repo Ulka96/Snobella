@@ -1,47 +1,44 @@
-import React from 'react'
-import Container from '../../../common/containerClass'
+import React from "react";
+import Container from "../../../common/containerClass";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // Images
-import logoSnobella from "../../../../assets/home/images/Snobella.png"
+import logoSnobella from "../../../../assets/home/images/Snobella.png";
 import searchIcon from "../../../../assets/home/icons/search.png";
 import profile from "../../../../assets/home/icons/profile.png";
 import heart from "../../../../assets/home/icons/heart.png";
 import bag from "../../../../assets/home/icons/bag.png";
 
-
 const MainHeader = () => {
+  const navElements = [
+    {
+      id: "1",
+      title: "Evening bags",
+    },
 
-const navElements = [
-  {
-    id: "1",
-    title: "Evening bags",
-  },
+    {
+      id: "2",
+      title: "Shoulder bag",
+    },
 
-  {
-    id: "2",
-    title: "Shoulder bag",
-  },
-
-  {
-    id: "3",
-    title: "Backpack",
-  },
-  {
-    id: "4",
-    title: "Handbag",
-  },
-  {
-    id: "5",
-    title: "Postman bag",
-  },
-  {
-    id: "6",
-    title: "Belt bags",
-  },
-];
-
+    {
+      id: "3",
+      title: "Backpack",
+    },
+    {
+      id: "4",
+      title: "Handbag",
+    },
+    {
+      id: "5",
+      title: "Postman bag",
+    },
+    {
+      id: "6",
+      title: "Belt bags",
+    },
+  ];
 
   return (
     <div>
@@ -117,6 +114,6 @@ const navElements = [
       </Container>
     </div>
   );
-}
+};
 
-export default MainHeader
+export default MainHeader;

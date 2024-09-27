@@ -1,8 +1,8 @@
-import React from 'react'
-import phone from "../../../../assets/home/icons/phone.png"
+import React from "react";
+import phone from "../../../../assets/home/icons/phone.png";
 
-import Container from '../../../common/containerClass';
-import { Link } from 'react-router-dom';
+import Container from "../../../common/containerClass";
+import { Link } from "react-router-dom";
 
 const SubHeader = () => {
   return (
@@ -37,6 +37,6 @@ const SubHeader = () => {
       </Container>
     </div>
   );
-}
+};
 
-export default SubHeader
+export default SubHeader;

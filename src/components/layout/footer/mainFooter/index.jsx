@@ -7,11 +7,7 @@ import send from "../../../../assets/home/icons/send.png";
 import email from "../../../../assets/home/icons/email.png";
 import { Link } from "react-router-dom";
 
-
-
-
 const MainFooter = () => {
-
   const shop = [
     {
       id: "1",
@@ -62,28 +58,26 @@ const MainFooter = () => {
     },
   ];
 
-    const help = [
-      {
-        id: "1",
-        title: "FAQ",
-      },
+  const help = [
+    {
+      id: "1",
+      title: "FAQ",
+    },
 
-      {
-        id: "2",
-        title: "Delivery",
-      },
+    {
+      id: "2",
+      title: "Delivery",
+    },
 
-      {
-        id: "3",
-        title: "Cancellation of the order",
-      },
-      {
-        id: "4",
-        title: "Don't go back",
-      },
-    ];
-
-
+    {
+      id: "3",
+      title: "Cancellation of the order",
+    },
+    {
+      id: "4",
+      title: "Don't go back",
+    },
+  ];
 
   return (
     <div className="pt-[14] pb-20 bg-[#F7F7F9]">

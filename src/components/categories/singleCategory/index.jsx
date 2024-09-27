@@ -1,5 +1,5 @@
-import React from 'react'
-import shoulderBag from "../../../assets/home/images/shoulderBag.png"
+import React from "react";
+import shoulderBag from "../../../assets/home/images/shoulderBag.png";
 
 const SingleCategory = (props) => {
   return (
@@ -13,6 +13,6 @@ const SingleCategory = (props) => {
       </div>
     </div>
   );
-}
+};
 
-export default SingleCategory
+export default SingleCategory;
