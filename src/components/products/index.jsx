@@ -12,7 +12,7 @@ const Products = () => {
   
 
       const fetchProducts = async () => {
-        const response = await fetch("http://localhost:3000/products");
+        const response = await fetch("http://localhost:3000/featured-products");
         const data = await response.json();
         setProducts(data);
       };

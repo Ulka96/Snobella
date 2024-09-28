@@ -20,11 +20,8 @@ const HomePage = () => {
       <MainHeader />
 
       <AllCategories />
-
       <Products/>
-
       <BestSellers/>
-
       <DiscountProducts/>
 
       <TopFooter />

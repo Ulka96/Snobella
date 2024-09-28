@@ -9,7 +9,7 @@ const BestSellers = () => {
   // const sliderRef = useRef(null);
 
   const fetchSellers = async () => {
-    const response = await fetch("http://localhost:3000/best-seller");
+    const response = await fetch("http://localhost:3000/best-sellers");
     const data = await response.json();
     setbestSellers(data);
   };
