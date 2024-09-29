@@ -9,6 +9,8 @@ import AllCategories from "../../components/categories/allCategories";
 import Products from "../../components/products";
 import BestSellers from "../../components/bestSellers";
 import DiscountProducts from "../../components/discountProducts";
+import Hero from "../../components/hero";
+import Deliveries from "../../components/deliveries";
 
 
 
@@ -18,6 +20,9 @@ const HomePage = () => {
     <div>
       <SubHeader />
       <MainHeader />
+
+      <Hero/>
+      <Deliveries/>
 
       <AllCategories />
       <Products/>

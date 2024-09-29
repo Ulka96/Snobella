@@ -15,7 +15,7 @@ const SingleProduct = (props) => {
   };
 
   return (
-    <div className="pt-[11px] pb-7 px-4 bg-[#F9F9F9]">
+    <div className="pt-[11px] pb-7 px-4 bg-[#F9F9F9] rounded-[8px]">
       <div className="flex flex-row items-center justify-between">
         {props.product.new && (
           <div className="py-[2px] px-[22px] text-white bg-[#43D167] rounded-[8px]">

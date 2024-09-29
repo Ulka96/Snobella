@@ -8,27 +8,38 @@ const MainProducts = () => {
 
 const [mainProducts, setMainProducts] = useState([])
 
-const fetchMainProducts = async() => {
-const response = await fetch("http://localhost:3000/featured-products")
+
+
+const fetchMainProducts = async(searchParams={}) => {
+
+const params = new URLSearchParams(window.location.search)
+
+console.log(searchParams, "searchparams");
+
+
+if(searchParams?.category) {
+    params.set("category", searchParams?.category)
+}
+
+const response = await fetch(`http://localhost:3000/featured-products?${params.toString()}`)
 const data = await response.json()
 setMainProducts(data)
 }
 
 useEffect(()=> {
-    fetchMainProducts()
+    fetchMainProducts({})
 },[])
-
 
 
 
   return (
     // <div> 
         <Container>
-          <div className='grid grid-cols-2 auto-rows-auto gap-[23px] flex-shrink w-[70%]'>
+          <div className='grid grid-cols-2 gap-[23px] w-[93%] ml-auto'>
             
           {
             mainProducts && mainProducts.map((product) => (
-              <SingleProduct product={product}/>
+              <SingleProduct key={product.id} product={product}/>
             ))
           }
 

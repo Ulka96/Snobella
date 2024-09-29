@@ -10,7 +10,7 @@ const FilterListing = () => {
   return (
     // <div>
       <Container>
-        <div className='w-[326px] space-y-6 flex-shrink'>
+        <div className=' space-y-6'>
 
          
          <Categories/>

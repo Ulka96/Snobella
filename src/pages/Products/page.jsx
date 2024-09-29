@@ -16,7 +16,8 @@ const ProductsPage = () => {
              
              <Heading/>
               
-              <div className='flex flex-row justify-between mx-auto'>
+              <div className='flex flex-row max-w-[1128px] mx-auto mt-8'>
+              
               <FilterListing/>
               <MainProducts/>
               </div>

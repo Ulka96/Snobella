@@ -84,7 +84,7 @@ const navElements = [
                       <img src={heart} alt="profile" />
                     </div>
                     <p className="text-[14px] font-medium text-[#2E2E2E]">
-                      Sign up
+                      Wishlist
                     </p>
                   </li>
                 </Link>
@@ -95,7 +95,7 @@ const navElements = [
                       <img src={bag} alt="profile" />
                     </div>
                     <p className="text-[14px] font-medium text-[#2E2E2E]">
-                      Sign up
+                      Basket
                     </p>
                   </li>
                 </Link>
