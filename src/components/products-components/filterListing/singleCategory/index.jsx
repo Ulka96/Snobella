@@ -1,12 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-const SingleCategory = ({category}) => {
+const SingleCategory = ({category, title, goToRoute}) => {
+
+
+
   return (
-    <Link to="#"><li className='text-[16px] font-normal text-[#212121E5]'>
+    <li onClick={()=> goToRoute("category",title)} className='cursor-pointer text-[16px] font-normal text-[#212121E5]'>
        {category.title}
     </li>
-    </Link>
+    
+    
+    
   )
 }
 

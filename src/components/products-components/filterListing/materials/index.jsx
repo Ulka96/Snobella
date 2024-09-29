@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FaChevronUp } from 'react-icons/fa6'
 import SingleMaterial from '../singleMaterial'
 
-const Materials = () => {
+const Materials = ({goToRoute}) => {
 
 const [materials, setMaterials] = useState([])
 
@@ -26,7 +26,7 @@ useEffect(() => {
     <ul className='flex flex-col gap-4'>
       {
         materials && materials.map((material) => (
-            <SingleMaterial material={material}/>
+            <SingleMaterial key={material.id} material={material} title={material.title} goToRoute={goToRoute}/>
         ))
       }
 

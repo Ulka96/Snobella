@@ -5,11 +5,12 @@ import { FaChevronUp } from "react-icons/fa6";
 import SingleCategory from '../singleCategory';
 
 
-const Categories = () => {
+const Categories = ({goToRoute}) => {
 
 const [categories, setCategories] = useState([])
 
 const getCategories = async() => {
+
 const response = await fetch("http://localhost:3000/categories")
 const data = await response.json()
  setCategories(data)
@@ -18,7 +19,7 @@ const data = await response.json()
 useEffect(() => {
     getCategories()
 }, [])
-
+ 
   return (
     <div className='pt-4 pb-6 px-10 border border-[#D0D0D0] rounded-[8px]'>
       <div className='flex flex-row justify-between items-center mb-6'>
@@ -30,7 +31,7 @@ useEffect(() => {
         
         {
             categories && categories.map((category) => (
-                <SingleCategory category={category}/>
+                <SingleCategory category={category} title={category.title} goToRoute={goToRoute}/>
             ))
         }
 

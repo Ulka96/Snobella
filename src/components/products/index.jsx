@@ -43,7 +43,7 @@ const Products = () => {
           
           {
             products && products.map((product) => (
-               <SingleProduct product={product}/>             
+               <SingleProduct key={product.id} product={product}/>             
             ))
           }
 

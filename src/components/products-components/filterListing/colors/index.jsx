@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaChevronUp } from 'react-icons/fa6'
 import SingleColor from '../singleColor'
 
-const Colors = () => {
+const Colors = ({goToRoute}) => {
+
+    
+const [colors, setColors] = useState([])
+
+const getColors = async() => {
+const response = await fetch("http://localhost:3000/colors")
+const data = await response.json()
+setColors(data)
+}
+
+useEffect(() => {
+   getColors()
+}, [])
+
+
   return (
     <div className='pt-4 pb-6 px-10 border border-[#D0D0D0] rounded-[8px]'>
     <div className='flex flex-row justify-between items-center mb-6'>
@@ -11,15 +26,11 @@ const Colors = () => {
     </div>
    
     <ul className='flex flex-row gap-3 flex-wrap'>
-      
-        <SingleColor/>
-        <SingleColor/>
-        <SingleColor/>
-        <SingleColor/>
-        <SingleColor/>
-        <SingleColor/>
-        <SingleColor/>
-        <SingleColor/>
+      {
+        colors && colors.map((color) => (
+          <SingleColor key={color.id} color={color} title={color.title} goToRoute={goToRoute}/>
+        ))
+      }
 
     </ul>
 

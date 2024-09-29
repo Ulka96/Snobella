@@ -37,7 +37,7 @@ const DiscountProducts = () => {
           <div className="grid grid-cols-3 auto-rows-auto gap-6 ">
             {discountproducts &&
               discountproducts.map((discountproduct) => (
-                <SingleDiscount discountproduct={discountproduct} />
+                <SingleDiscount key={discountproduct.id} discountproduct={discountproduct} />
               ))}
           </div>
         </div>

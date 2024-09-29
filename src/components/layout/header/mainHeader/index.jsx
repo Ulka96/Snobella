@@ -49,7 +49,7 @@ const navElements = [
         <div className="pt-7 pb-6 flex flex-col ">
           <div className="flex flex-row items-center">
             <div className="w-[156px] h-[40px]">
-              <img src={logoSnobella} alt="logoSnobella" />
+              <Link to="/"><img src={logoSnobella} alt="logoSnobella"/></Link>
             </div>
 
             <div className="flex flex-row pl-4 pr-3 py-[15px] bg-[#F7F9FC] rounded-[8px] w-[504px] justify-between ml-[108px] mr-[57px]">
@@ -106,9 +106,9 @@ const navElements = [
           <div className="mt-[31px]">
             <ul className="flex flex-row gap-[54px] text-[16px] text-[#273142] font-normal">
               {navElements &&
-                navElements.map((element) => (
+                navElements.map((element,) => (
                   <Link>
-                    <li>{element.title}</li>
+                    <li key={element.id}>{element.title}</li>
                   </Link>
                 ))}
             </ul>

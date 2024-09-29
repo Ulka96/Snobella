@@ -224,5 +224,56 @@
       "id": 6,
       "title": "Glitter"
     }
+  ],
+
+  "sizes": [
+    {
+      "id": 1,
+      "title": "XS"
+    },
+    {
+      "id": 2,
+      "title": "S"
+    },
+    {
+      "id": 3,
+      "title": "M"
+    }
+  ],
+
+  "colors": [
+    {
+      "id": 1,
+      "title": "275240"
+    },
+    {
+      "id": 2,
+      "title": "773838"
+    },
+    {
+      "id": 3,
+      "title": "000000"
+    },
+    {
+      "id": 4,
+      "title": "D6B73B"
+    },
+    {
+      "id": 5,
+      "title": "3D2A33"
+    },
+    {
+      "id": 6,
+      "title": "895C31"
+    },
+    {
+      "id": 7,
+      "title": "7C4DFF"
+    },
+    {
+      "id": 8,
+      "title": "F75145"
+    }
+
   ]
 }

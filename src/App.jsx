@@ -16,8 +16,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<HomePage/>} />
           <Route path='/products' element={<Products/>}/>
-          <Route exact path="/products/featured-products" component={() => <Products type="featured-products" />} />
-
+          
         </Routes>
       </main>
     </>

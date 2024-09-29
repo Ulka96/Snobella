@@ -134,7 +134,7 @@ const MainFooter = () => {
                 {shop &&
                   shop.map((element) => (
                     <Link>
-                      <li>{element.title}</li>
+                      <li key={element.id}>{element.title}</li>
                     </Link>
                   ))}
               </ul>
@@ -148,7 +148,7 @@ const MainFooter = () => {
                 {company &&
                   company.map((element) => (
                     <Link>
-                      <li>{element.title}</li>
+                      <li key={element.id}>{element.title}</li>
                     </Link>
                   ))}
               </ul>
@@ -162,7 +162,7 @@ const MainFooter = () => {
                 {help &&
                   help.map((element) => (
                     <Link>
-                      <li>{element.title}</li>
+                      <li key={element.id}>{element.title}</li>
                     </Link>
                   ))}
               </ul>

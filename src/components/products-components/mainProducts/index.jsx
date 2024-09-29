@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+
 import Container from "../../common/containerClass/index"
 import SingleProduct from '../../products/singleProduct'
 
@@ -10,26 +11,38 @@ const [mainProducts, setMainProducts] = useState([])
 
 
 
-const fetchMainProducts = async(searchParams={}) => {
+const fetchMainProducts = async({searchParams}) => {
 
-const params = new URLSearchParams(window.location.search)
+console.log(searchParams, "searchParams");
 
-console.log(searchParams, "searchparams");
+const params = new URLSearchParams()
 
-
-if(searchParams?.category) {
-    params.set("category", searchParams?.category)
+if(searchParams.categories) {
+  params.set("category", searchParams.categories)
 }
 
-const response = await fetch(`http://localhost:3000/featured-products?${params.toString()}`)
+if(searchParams.materials) {
+  params.set("material", searchParams.materials)
+}
+
+if(searchParams.sizes) {
+  params.set("size", searchParams.sizes)
+}
+
+if(searchParams.colors) {
+  params.set("color", searchParams.colors)
+}
+
+
+const response = await fetch(`http://localhost:3000/featured-products${params.toString()}`)
 const data = await response.json()
 setMainProducts(data)
 }
 
 useEffect(()=> {
-    fetchMainProducts({})
+    fetchMainProducts({searchParams})
 },[])
-
+ 
 
 
   return (

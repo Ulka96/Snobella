@@ -37,7 +37,7 @@ const BestSellers = () => {
           <div className="grid grid-cols-3 auto-rows-auto gap-6 ">
             {bestSellers &&
               bestSellers.map((bestSeller) => (
-                <SingleSeller bestSeller={bestSeller} />
+                <SingleSeller key={bestSeller.id} bestSeller={bestSeller} />
               ))}
           </div>
         </div>
