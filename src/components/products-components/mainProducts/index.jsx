@@ -3,66 +3,64 @@ import React, { useEffect, useState } from 'react'
 import Container from "../../common/containerClass/index"
 import SingleProduct from '../../products/singleProduct'
 
+import { useDispatch, useSelector } from 'react-redux';
 
 
-const MainProducts = () => {
+const MainProducts = ({ setCount }) => {
+  const [mainProducts, setMainProducts] = useState([]);
 
-const [mainProducts, setMainProducts] = useState([])
+  //  const [filteredProducts, setFilteredProducts] = useState([]);
 
+  //  const selectedCategories = useSelector(
+  //    (state) => state.categories.selectedCategories
+  //  );
 
+  //  const filterProducts = () => {
+  //    let products = mainProducts;
 
-const fetchMainProducts = async({searchParams}) => {
+  //    if (selectedCategories.length > 0) {
+  //      products = products.filter((product) =>
+  //        selectedCategories.includes(product.category)
+  //      );
+  //    }
 
-console.log(searchParams, "searchParams");
-
-const params = new URLSearchParams()
-
-if(searchParams.categories) {
-  params.set("category", searchParams.categories)
-}
-
-if(searchParams.materials) {
-  params.set("material", searchParams.materials)
-}
-
-if(searchParams.sizes) {
-  params.set("size", searchParams.sizes)
-}
-
-if(searchParams.colors) {
-  params.set("color", searchParams.colors)
-}
+  //    setFilteredProducts(products);
+  //  };
 
 
-const response = await fetch(`http://localhost:3000/featured-products${params.toString()}`)
-const data = await response.json()
-setMainProducts(data)
-}
+  const fetchMainProducts = async () => {
+    const response = await fetch(`http://localhost:3000/products`);
+    const data = await response.json();
 
-useEffect(()=> {
-    fetchMainProducts({searchParams})
-},[])
- 
+    setCount(data.length);
+    setMainProducts(data);
 
+  };
+
+  useEffect(() => {
+    fetchMainProducts();
+    // setFilteredProducts(data);
+
+  }, []);
+
+  //  useEffect(() => {
+  //    filterProducts();
+  //  }, [selectedCategories]);
 
   return (
-    // <div> 
-        <Container>
-          <div className='grid grid-cols-2 gap-[23px] w-[93%] ml-auto'>
-            
-          {
-            mainProducts && mainProducts.map((product) => (
-              <SingleProduct key={product.id} product={product}/>
-            ))
-          }
+    // <div>
 
+    <Container>
+      <div className="grid grid-cols-2 gap-[23px] w-[93%] ml-auto">
+        {mainProducts &&
+          mainProducts.map((product) => (
+            <SingleProduct key={product.id} product={product} />
+          ))}
+      </div>
+    </Container>
 
-
-          </div>
-        </Container>
-    
     // </div>
-  )
-}
+  );
+};
 
 export default MainProducts

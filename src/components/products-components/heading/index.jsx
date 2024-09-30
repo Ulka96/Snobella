@@ -1,44 +1,84 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from "../../common/containerClass/index"
 
 // React icons
-import { IoChevronDown } from "react-icons/io5";
+import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 
 
-const Heading = () => {
+const Heading = ({count}) => {
+
+const [isOpen, setIsOpen] = useState(false)
+
+const toggleDown = () => {
+  setIsOpen(!isOpen)
+}
+
+
   return (
     <div>
-        <Container>
-          <div className='flex flex-row justify-between'>
-         <h1 className='text-[40px] font-medium text-[#212121] font-rubik'>Shoulder bags</h1>
+      <Container>
+        <div className="flex flex-row justify-between">
+          <h1 className="text-[40px] font-medium text-[#212121] font-rubik">
+            Shoulder bags
+          </h1>
 
+          <div className="flex flex-row gap-7 items-center mt-[38px]">
+            <p className="text-[16px] text-[#212121E5]">{count} result</p>
 
-          <div className='flex flex-row gap-7 items-center mt-[38px]'>
-           <p className='text-[16px] text-[#212121E5]'>320 result</p>
+            <div className="w-[140px] relative">
+              <button
+                onClick={toggleDown}
+                className="border border-[#D0D0D0] rounded-[8px] w-full py-[6px] pl-[19px] pr-[13px] 
+            flex justify-between items-center drop-shadow"
+              >
+                <h2 className="text-[16px] text-[#212121E5]">Sort</h2>
+                {isOpen ? <IoChevronDown /> : <IoChevronUp />}
+              </button>
 
-           <div className=''>
-            <button className='border border-[#D0D0D0] rounded-[8px] py-[6px] pl-[19px] pr-[13px] 
-            flex flex-row gap-2 items-center'>
-                <h2 className='text-[16px] text-[#212121E5]'>Featured</h2>
-                <IoChevronDown/>
-            </button>
-           </div>
+              {isOpen && (
+                <div className="absolute top-[calc(100%_+_5px)] z-20 drop-shadow overflow-hidden">
+                  <button
+                    className="flex justify-between items-center py-[6px] pl-[19px] 
+                pr-[13px] bg-white cursor-pointer w-[140px]"
+                  >
+                    Featured
+                  </button>
 
+                  <button
+                    className="flex justify-between items-center py-[6px] pl-[19px] 
+                pr-[13px] bg-white cursor-pointer w-[140px]"
+                  >
+                    Discount
+                  </button>
+
+                  <button
+                    className="flex justify-between items-center py-[6px] pl-[19px] 
+                pr-[13px] bg-white cursor-pointer w-[140px]"
+                  >
+                    Best-seller
+                  </button>
+
+                  <button
+                    className="flex justify-between items-center py-[6px] pl-[19px] 
+                pr-[13px] bg-white cursor-pointer w-[140px]"
+                  >
+                    High-to-low
+                  </button>
+
+                  <button
+                    className="flex justify-between items-center py-[6px] pl-[19px] 
+                pr-[13px] bg-white cursor-pointer w-[140px]"
+                  >
+                    Low-to-high
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
-
-
-
-
-
-
-
-          </div>
-
-
-
-        </Container>
+        </div>
+      </Container>
     </div>
-  )
+  );
 }
 
 export default Heading

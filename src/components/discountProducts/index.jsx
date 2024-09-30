@@ -10,7 +10,7 @@ const DiscountProducts = () => {
   // const sliderRef = useRef(null);
 
   const fetchDiscountProducts = async () => {
-    const response = await fetch("http://localhost:3000/discount-products");
+    const response = await fetch("http://localhost:3000/products?discount-products=true");
     const data = await response.json();
     setDiscountproducts(data);
   };
