@@ -1,66 +1,66 @@
-import React, { useEffect, useState } from 'react'
-
-import Container from "../../common/containerClass/index"
-import SingleProduct from '../../products/singleProduct'
-
-import { useDispatch, useSelector } from 'react-redux';
-
+import React, { useEffect, useState } from 'react';
+import Container from "../../common/containerClass/index";
+import SingleProduct from '../../products/singleProduct';
+import { useSelector } from 'react-redux';
 
 const MainProducts = ({ setCount }) => {
   const [mainProducts, setMainProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
-  //  const [filteredProducts, setFilteredProducts] = useState([]);
-
-  //  const selectedCategories = useSelector(
-  //    (state) => state.categories.selectedCategories
-  //  );
-
-  //  const filterProducts = () => {
-  //    let products = mainProducts;
-
-  //    if (selectedCategories.length > 0) {
-  //      products = products.filter((product) =>
-  //        selectedCategories.includes(product.category)
-  //      );
-  //    }
-
-  //    setFilteredProducts(products);
-  //  };
+  const categoryId = useSelector((state) => state.categories.categoryId);
+  const materialId = useSelector((state) => state.materials.materialId);
 
 
+  // Fetch all products
   const fetchMainProducts = async () => {
     const response = await fetch(`http://localhost:3000/products`);
     const data = await response.json();
-
+    
     setCount(data.length);
     setMainProducts(data);
-
   };
 
   useEffect(() => {
     fetchMainProducts();
-    // setFilteredProducts(data);
-
   }, []);
 
-  //  useEffect(() => {
-  //    filterProducts();
-  //  }, [selectedCategories]);
+  // Filter products
+  useEffect(() => {
+    let filtered = mainProducts;
+
+    if (categoryId) {
+      filtered = filtered.filter((product) => product.categoryId === categoryId);
+    }
+
+    if (materialId) {
+      filtered = filtered.filter((product) => product.materialId === materialId);
+    }
+
+    setFilteredProducts(filtered);
+  }, [categoryId, materialId, mainProducts]);
+
+
+  
+  const sortHandle = () => {
+    const sortedData = [...filteredProducts].sort((a,b) => a.price - b.price)
+    setFilteredProducts(sortedData)
+    
+  }
 
   return (
-    // <div>
-
     <Container>
+      <button onClick={sortHandle}>sort</button>
       <div className="grid grid-cols-2 gap-[23px] w-[93%] ml-auto">
-        {mainProducts &&
-          mainProducts.map((product) => (
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
             <SingleProduct key={product.id} product={product} />
-          ))}
+          ))
+        ) : (
+          <p>No products found for the selected category.</p>
+        )}
       </div>
     </Container>
-
-    // </div>
   );
 };
 
-export default MainProducts
+export default MainProducts;

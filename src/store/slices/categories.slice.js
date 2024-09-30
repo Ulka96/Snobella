@@ -3,29 +3,35 @@ import { createSlice } from "@reduxjs/toolkit";
 const categorySlice = createSlice({
   name: "category",
   initialState: {
-    categories: [],
-    selectedCategories: [],
+    categoryId: "",
+    selectedCategoryIds: ""
+ 
   },
   reducers: {
-    setCategories: (state, action) => {
-      const categories = action.payload;
-      state.categories = categories;
+    setCategory: (state, action) => {
+      state.categoryId = action.payload    
     },
-    selectCategory: (state, action) => {
-      const category = action.payload;
-      const isSelected = state.selectedCategories.includes(category);
 
-      if (!isSelected) {
-        state.selectedCategories.push(category);
-      } else {
-        state.selectedCategories = state.selectedCategories.filter(
-          (selectedCategory) => selectedCategory !== category
-        );
+    selectCategory : (state,action) => {
+      const categoryId = action.payload;
+      const isSelected = state.selectedCategoryIds.includes(categoryId);
+      
+      if(!isSelected) {
+       state.selectedCategoryIds.push(categoryId)
       }
-    },
+    
+      else {
+       state.selectedCategoryIds = state.selectedCategoryIds.filter(selectedCategoryId =>
+        selectedCategoryId !== categoryId
+       )
+      }
+    }
+
   },
 });
 
 export default categorySlice;
 
-export const { setCategories } = categorySlice.actions;
+export const { setCategory, selectCategory } = categorySlice.actions;
+
+

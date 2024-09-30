@@ -15,6 +15,8 @@ const ProductsPage = () => {
     setCount();
   };
 
+  
+
   return (
     <div>
       <SubHeader />

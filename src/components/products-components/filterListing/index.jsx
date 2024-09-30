@@ -5,22 +5,10 @@ import Materials from './materials'
 import Price from './prices'
 import Sizes from './sizes'
 import Colors from './colors'
-import { useNavigate } from 'react-router-dom'
 
 const FilterListing = () => {
 
-  const navigate = useNavigate()
 
-  const goToRoute = (key, title) => {
-
-    const params = new URLSearchParams(window.location.search)
-    params.set(key, title)
-
-    // navigate(`/products?${key}=${title}`)
-
-    navigate(`/products?${params.toString()}`)
-
-  }
 
   return (
     // <div>
@@ -28,11 +16,11 @@ const FilterListing = () => {
         <div className=' space-y-6'>
 
          
-         <Categories goToRoute={goToRoute}/>
-         <Materials goToRoute={goToRoute}/>
+         <Categories />
+         <Materials />
          <Price/>
-         <Sizes goToRoute={goToRoute}/>
-         <Colors goToRoute={goToRoute}/>
+         <Sizes />
+         <Colors />
 
 
 
