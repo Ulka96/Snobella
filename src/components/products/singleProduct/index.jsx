@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 
+
 // React icons
 import { IoIosHeartEmpty } from "react-icons/io";
 import { TiHeartFullOutline } from "react-icons/ti";
 
 // Images
 import groupstars from "../../../assets/home/images/groupstars.png";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "../../../store/slices/cart.slice";
 
 const SingleProduct = (props) => {
   const [heart, setHeart] = useState(false);
@@ -13,6 +16,36 @@ const SingleProduct = (props) => {
   const heartToggle = () => {
     setHeart(!heart);
   };
+  
+  const dispatch = useDispatch()
+  const productCount = useSelector((state) => state.cart.productCount)
+  const customCart = useSelector((state) => state.cart.customCart)
+
+
+  const addToCartHandler = (id) => {
+
+    const foundProd = customCart.find((elem) => elem.id === id)
+
+    if(foundProd) {
+       const newCart = customCart.map((elem) => {
+        if(elem.id === foundProd.id) {
+          elem.count = elem.count + 1
+        }
+        return elem;
+       })
+
+       dispatch(addToCart({customCart: newCart}))
+       console.log(newCart);
+    }
+    else {
+
+      dispatch(addToCart([...customCart, {id:id, count: 1}]))
+    }
+
+    // const newCount = productCount+1 
+  }
+
+
 
   return (
     <div className="pt-[11px] pb-7 px-4 bg-[#F9F9F9] rounded-[8px]">
@@ -60,7 +93,9 @@ const SingleProduct = (props) => {
         </div>
 
         <div className="py-[10px] border border-[#212121] rounded-[8px] text-center mt-[39px] flex hover:bg-[#1E90FF] hover:border-none">
-          <button className="text-[16px] font-medium text-[#212121] flex-grow hover:text-white">
+          <button onClick={() => {
+            addToCartHandler(props.product.id)
+          }} className="text-[16px] font-medium text-[#212121] flex-grow hover:text-white">
             Add to card
           </button>
         </div>

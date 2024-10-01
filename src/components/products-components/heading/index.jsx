@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 // React icons
 import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 
-import { sortHandle, highToLowSort } from '../../../store/slices/filter.slice';
+import { lowToHighSort, highToLowSort, featuredSort, discountSort, bestSellerSort } from '../../../store/slices/filter.slice';
 
 
 const Heading = ({count}) => {
@@ -43,21 +43,29 @@ const dispatch = useDispatch()
 
               {isOpen && (
                 <div className="absolute top-[calc(100%_+_5px)] z-20 drop-shadow overflow-hidden">
-                  <button
+                  <button                     
+                    onClick={() => {
+                      dispatch(featuredSort());
+                    }}
                     className="flex justify-between items-center py-[6px] pl-[19px] 
                 pr-[13px] bg-white cursor-pointer w-[140px]"
                   >
                     Featured
                   </button>
 
-                  <button
+                  <button onClick={() => {
+                      dispatch(discountSort());
+                    }}
                     className="flex justify-between items-center py-[6px] pl-[19px] 
                 pr-[13px] bg-white cursor-pointer w-[140px]"
                   >
                     Discount
                   </button>
 
-                  <button
+                  <button                
+                     onClick={() => {
+                      dispatch(bestSellerSort());
+                    }}
                     className="flex justify-between items-center py-[6px] pl-[19px] 
                 pr-[13px] bg-white cursor-pointer w-[140px]"
                   >
@@ -76,7 +84,7 @@ const dispatch = useDispatch()
 
                   <button
                     onClick={() => {
-                      dispatch(sortHandle());
+                      dispatch(lowToHighSort());
                     }}
                     className="flex justify-between items-center py-[6px] pl-[19px] 
                 pr-[13px] bg-white cursor-pointer w-[140px]"

@@ -1,13 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { SiTrueup } from "react-icons/si";
+import { TbRuler } from "react-icons/tb";
 
 const filterSlice = createSlice({
   name: "filter",
   initialState: {
     materialId: "",
     categoryId: "",
+    colorId: "",
+    sizeId: "",
     selectedCategoryIds: "",
-    isSorted: false,
+
+    lowToHighSort: false,
     highToLowSort: false,
+
+    featured: false,
+    discount: false,
+    bestSeller: false,
 
     lowPrice : 0,
     highPrice : 0
@@ -20,6 +29,10 @@ const filterSlice = createSlice({
 
     setCategory: (state, action) => {
       state.categoryId = action.payload;
+    },
+
+    setColor: (state, action) => {
+      state.colorId = action.payload;
     },
 
     selectCategory: (state, action) => {
@@ -41,20 +54,53 @@ const filterSlice = createSlice({
       state.selectedCategoryIds = "";
     },
 
-    sortHandle: (state, action) => {
-      state.isSorted = true;
+    lowToHighSort: (state, action) => {
+      state.lowToHighSort = true
       state.highToLowSort = false;
+      state.featured = false
+      state.bestSeller = false
+      state.discount = false
+      
     },
 
     highToLowSort: (state, action) => {
-      state.isSorted = false
       state.highToLowSort = true
+      state.lowToHighSort = false
+      state.featured = false
+      state.bestSeller = false
+      state.discount = false
+    
     },
 
+    featuredSort: (state, action) => {
+      state.featured = true
+      state.lowToHighSort = false
+      state.highToLowSort = false
+      state.bestSeller = false
+      state.discount = false
+    },
+
+    discountSort: (state, action) => {
+      state.discount = true
+      state.featured = false
+      state.bestSeller = false
+      state.lowToHighSort = false
+      state.highToLowSort = false
+    },
+
+    bestSellerSort: (state, action) => {
+      state.bestSeller = true
+      state.featured = false
+      state.discount = false
+      state.lowToHighSort = false
+      state.highToLowSort = false
+    },
 
     priceFilter: (state, action) => {
-
-    }
+      const { lowPrice, highPrice } = action.payload;
+      state.lowPrice = lowPrice;
+      state.highPrice = highPrice;
+    },
 
   },
 });
@@ -64,9 +110,13 @@ export default filterSlice;
 export const {
   setMaterial,
   setCategory,
+  setColor,
   selectCategory,
   filterHandle,
-  sortHandle,
+  lowToHighSort,
   highToLowSort,
+  featuredSort,
+  discountSort,
+  bestSellerSort,
   priceFilter,
 } = filterSlice.actions;

@@ -3,6 +3,9 @@ import Container from '../../../common/containerClass'
 
 import { Link } from 'react-router-dom';
 
+// Redux
+import { useSelector } from "react-redux";
+
 // Images
 import logoSnobella from "../../../../assets/home/images/Snobella.png"
 import searchIcon from "../../../../assets/home/icons/search.png";
@@ -41,6 +44,8 @@ const navElements = [
     title: "Belt bags",
   },
 ];
+
+const productCount = useSelector((state) => state.cart.productCount)
 
 
   return (
@@ -89,13 +94,15 @@ const navElements = [
                   </li>
                 </Link>
 
-                <Link>
+                <Link to="/cart">
                   <li className="flex flex-row">
                     <div className="w-6 h-6 mr-[10px]">
                       <img src={bag} alt="profile" />
                     </div>
                     <p className="text-[14px] font-medium text-[#2E2E2E]">
                       Basket
+                      <hr />
+                      <span>{productCount}</span>
                     </p>
                   </li>
                 </Link>

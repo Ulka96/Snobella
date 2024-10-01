@@ -9,9 +9,16 @@ const MainProducts = ({ setCount }) => {
 
   const categoryId = useSelector((state) => state.filter.categoryId);
   const materialId = useSelector((state) => state.filter.materialId);
-
-  const isSorted = useSelector((state) => state.filter.isSorted);
+  const colorId = useSelector((state) => state.filter.colorId)
+  const lowToHighSort = useSelector((state) => state.filter.lowToHighSort);
  const highToLowSort = useSelector((state) => state.filter.highToLowSort)
+ const featured = useSelector((state) => state.filter.featured)
+ const discounted = useSelector((state) => state.filter.discount)
+ const bestSeller = useSelector((state) => state.filter.bestSeller)
+
+ const lowPrice = useSelector((state) => state.filter.lowPrice)
+ const highPrice = useSelector((state) => state.filter.highPrice)
+
 
 
   // Fetch all products
@@ -43,7 +50,13 @@ const MainProducts = ({ setCount }) => {
       );
     }
 
-    if (isSorted) {
+    if (colorId) {
+      filtered = filtered.filter(
+        (product) => product.colorId === colorId
+      );
+    }
+
+    if (lowToHighSort) {
       filtered = [...filtered].sort((a, b) => a.price - b.price);
     }
 
@@ -51,11 +64,35 @@ const MainProducts = ({ setCount }) => {
       filtered = [...filtered].sort((a, b) => b.price - a.price);
     }
 
+    if(featured) {
+      filtered = filtered.filter((product) => product["featured-products"])
+    }
 
+    if(discounted) {
+      filtered = filtered.filter((product) => product["discount-products"])
+    }
+
+    if(bestSeller) {
+      filtered = filtered.filter((product) => product["best-sellers"])
+    }
+    
+     // Filter by price range
+     if (lowPrice || highPrice) {
+      filtered = filtered.filter((product) => {
+        const productPrice = product.price;
+        const filteredPrice =
+          (lowPrice ? productPrice >= lowPrice : true) &&
+          (highPrice ? productPrice <= highPrice : true);
+        return filteredPrice;
+      });
+    }
+   
     
 
     setFilteredProducts(filtered);
-  }, [categoryId, materialId, mainProducts, isSorted, highToLowSort]);
+  }, [categoryId, materialId, colorId, mainProducts, featured,discounted, bestSeller, lowToHighSort, highToLowSort, lowPrice, highPrice]);
+
+
 
   return (
     <Container>
