@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
-import {setMaterial} from "../../../../store/slices/materials.slice.js"
+import {setMaterial} from "../../../../store/slices/filter.slice.js"
 
 const SingleMaterial = ({material}) => {
 
 const dispatch = useDispatch()
 
-const materialId = useSelector((state) => state.materials.materialId);
+const materialId = useSelector((state) => state.filter.materialId);
 
 
 const materialHandler = (id) => {

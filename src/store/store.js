@@ -1,12 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import categorySlice from "../store/slices/categories.slice.js"
-import materialSlice from "./slices/materials.slice.js";
+
+import filterSlice from "../store/slices/filter.slice.js"
 
 
 const store = configureStore({
   reducer: {
-    categories: categorySlice.reducer,
-    materials: materialSlice.reducer
+    filter: filterSlice.reducer
   },
 });
 

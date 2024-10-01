@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { useDispatch , useSelector} from 'react-redux'
-import {setCategory, selectCategory} from "../../../../store/slices/categories.slice.js"
+import {setCategory, selectCategory} from "../../../../store/slices/filter.slice.js"
 
 const SingleCategory = ({category}) => {
 
 const dispatch = useDispatch()
 
-const categoryId = useSelector((state) => state.categories.categoryId);
+const categoryId = useSelector((state) => state.filter.categoryId);
 
 const categoryHandler = (id) => {
 dispatch(setCategory(id))

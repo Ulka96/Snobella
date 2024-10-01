@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import Container from "../../common/containerClass/index"
 
+import { useDispatch } from 'react-redux';
+
 // React icons
 import { IoChevronDown, IoChevronUp } from "react-icons/io5";
+
+import { sortHandle, highToLowSort } from '../../../store/slices/filter.slice';
 
 
 const Heading = ({count}) => {
@@ -12,6 +16,8 @@ const [isOpen, setIsOpen] = useState(false)
 const toggleDown = () => {
   setIsOpen(!isOpen)
 }
+
+const dispatch = useDispatch()
 
 
   return (
@@ -59,6 +65,9 @@ const toggleDown = () => {
                   </button>
 
                   <button
+                    onClick={() => {
+                      dispatch(highToLowSort());
+                    }}
                     className="flex justify-between items-center py-[6px] pl-[19px] 
                 pr-[13px] bg-white cursor-pointer w-[140px]"
                   >
@@ -66,6 +75,9 @@ const toggleDown = () => {
                   </button>
 
                   <button
+                    onClick={() => {
+                      dispatch(sortHandle());
+                    }}
                     className="flex justify-between items-center py-[6px] pl-[19px] 
                 pr-[13px] bg-white cursor-pointer w-[140px]"
                   >

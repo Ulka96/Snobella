@@ -5,6 +5,7 @@ import Materials from './materials'
 import Price from './prices'
 import Sizes from './sizes'
 import Colors from './colors'
+import ClearFilter from './clearButton'
 
 const FilterListing = () => {
 
@@ -15,7 +16,7 @@ const FilterListing = () => {
       <Container>
         <div className=' space-y-6'>
 
-         
+         <ClearFilter/>
          <Categories />
          <Materials />
          <Price/>
