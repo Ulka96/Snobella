@@ -1,65 +1,66 @@
-import React from 'react'
-import laptopbag from "../../../assets/home/images/laptopbag.png"
-
-// React icons
+import React from 'react';
 import { FaChevronDown } from "react-icons/fa6";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FiTrash } from "react-icons/fi";
 
-
-
-
-const SingleProductWithCart = () => {
+const SingleProductWithCart = ({ product, quantity }) => {
   return (
-    <div className='p-4 border border-[#E4E4E4] rounded-[8px] flex flex-row '>
+    <div className='p-4 border border-[#E4E4E4] rounded-[8px] flex flex-row'>
       
-    <div className='bg-[#F9F9F9] py-6 px-[14px] rounded-[8px] mr-[25px]'>
-      <img src={laptopbag} alt="laptopbag" className='w-[124px] h-[137px]' />
-    </div>
-
-    <div>
-      <div className='flex flex-row '>
-      <h1 className='text-[16px] text-[#212121] font-bold mb-3 '>Hotel Magique Love and Magique Tote Bag</h1>
-      <h2 className=''>US $20.00</h2>
+      <div className="p-4 bg-[#F9F9F9] rounded-lg w-[150px] h-[180px]">
+        <img src={product.image} alt="" className="rounded-lg"/>
       </div>
-       <span className='text-[14px] font-normal text-[#212121BF] mr-[23px]'>Size: XS</span>
-       <span className='text-[14px] font-normal text-[#212121BF]'>Color: Grey</span>
 
-       <h3 className='text-[14px] font-normal text-[#212121BF] my-2'>Delivery: 25-32 days</h3>
-       <h4 className='text-[14px] font-normal text-[#212121BF] mb-2'>Quality</h4>
+      <div className="flex flex-col">
+        <div className="flex w-[534px] justify-between">
+          <p className="font-medium text-[#212121] text-[16px]">
+            {product.title}
+          </p>
+          <p className="text-[18px] font-medium text-[#212121]">US ${(product.discountedPrice * quantity).toFixed(2)}</p>
+        </div>
+        <div className="flex items-center gap-6 mb-2">
+          <p className="text-[#212121] text-opacity-75 text-[14px]">
+            Size : {product.size}
+          </p>
+          <div className='flex flex-row items-center'>
 
-       <div className='py-[6px] px-[7px] w-[72px] flex flex-row border border-[#E4E4E4] rounded-[3px]'>
-        <p className='mr-[6px]'>2 - 9</p>
-        <button className=''>
-         <FaChevronDown/>
-        </button>
-       </div>
+          <p className="text-[#212121] text-opacity-75 text-[14px]">
+            Color : 
+          </p>
+          <span style={{backgroundColor: `#${product.color}`}}
+             className={`h-6 w-6 border border-x-2 rounded-full cursor-pointer`}></span>
+             </div>
+        </div>
+        <div className="mb-2">
+          <p className="text-[#212121] text-opacity-75 text-[14px]">
+            Count : {quantity}
+          </p>
+        </div>
+        <div className="mb-2">
+          <p className="text-[#212121] text-opacity-75 text-[14px]">Quality</p>
+        </div>
+        <div>
+          <select>
+            <option>2-9</option>
+            <option>10-49</option>
+            <option>50</option>
+          </select>
+        </div>
+      </div>
+
+      <div className='mt-auto flex gap-10 ml-auto'>
+        <div className='flex gap-[2px] items-center'>
+          <button><IoMdHeartEmpty /></button>
+          <p>Favorite</p>
+        </div>
+
+        <div className='flex gap-[2px] items-center'>
+          <button><FiTrash /></button>
+          <p>Remove</p>
+        </div>
+      </div>
     </div>
-
-
-    <div >
-    </div>
-
-
-  <div className='mt-auto flex gap-10 ml-auto'>
-  <div className='flex gap-[2px] items-center '>
-  <button><IoMdHeartEmpty/></button>
-  <p>Favorite</p>
-  </div>
-
-  <div className='flex gap-[2px] items-center '>
-  <button><FiTrash/></button>
-  <p>Remove</p>
-  </div>
-
-  </div>
-
-
-
-    
-
-    </div>
-  )
+  );
 }
 
-export default SingleProductWithCart
+export default SingleProductWithCart;

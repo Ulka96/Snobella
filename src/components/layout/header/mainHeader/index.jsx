@@ -15,7 +15,7 @@ import heart from "../../../../assets/home/icons/heart.png";
 import bag from "../../../../assets/home/icons/bag.png";
 
 import { loginHandler } from "../../../../store/slices/register.slice";
-import { addToCart } from "../../../../store/slices/cart.slice";
+import { addToCart , addToFav} from "../../../../store/slices/cart.slice";
 
 const MainHeader = () => {
   const dispatch = useDispatch();
@@ -48,7 +48,7 @@ const MainHeader = () => {
     },
   ];
 
-  const productCount = useSelector((state) => state.cart.productCount);
+  // const productCount = useSelector((state) => state.cart.productCount);
 
   const isLogin = useSelector((state) => state.register.isLogin);
 
@@ -104,6 +104,8 @@ const MainHeader = () => {
 
                             localStorage.clear();
                              dispatch(addToCart([]));
+                             dispatch(addToFav([]));
+                             navigate("/sign-in");
                           }}
                           className="text-[14px] font-medium text-[#2E2E2E]"
                         >
@@ -114,7 +116,7 @@ const MainHeader = () => {
                   </li>
                 </Link>
 
-                <Link>
+                <Link to="/fav">
                   <li className="flex flex-row">
                     <div className="w-6 h-6 mr-[10px]">
                       <img src={heart} alt="profile" />

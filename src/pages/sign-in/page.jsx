@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 
@@ -7,6 +7,7 @@ import Container from "../../components/common/containerClass";
 import { useDispatch, useSelector } from "react-redux";
 
 import { loginHandler } from "../../store/slices/register.slice.js";
+import { addToCart } from "../../store/slices/cart.slice.js";
 
 const SignIn = () => {
   const emailRef = useRef();
@@ -52,6 +53,29 @@ const SignIn = () => {
 
     navigate("/");
   };
+
+  // useEffect(() => {
+  //   if (isLogin) {
+  //     const savedCart = localStorage.getItem("cart");
+  //     const savedFav = localStorage.getItem("customFav");
+
+  //     if (savedCart) {
+  //       dispatch(addToCart(JSON.parse(savedCart))); 
+  //     }
+
+  //     if (savedFav) {
+  //       dispatch(addToFav(JSON.parse(savedFav))); 
+  //     }
+  //   }
+  // }, [isLogin, dispatch]); 
+
+  
+  useEffect(() => {
+
+    
+  })
+
+  
 
   return (
     <div>

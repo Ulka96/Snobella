@@ -15,6 +15,7 @@ import SubFooter from './components/layout/footer/subFooter';
 import ShoppingCart from './pages/Shopping-Cart/page';
 import SignUp from './pages/sign-up/page';
 import SignIn from './pages/sign-in/page';
+import FavPage from './pages/fav/page';
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<ShoppingCart />} />
+          <Route path="/fav" element={<FavPage/>} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/sign-in" element={<SignIn />} />
         </Routes>
