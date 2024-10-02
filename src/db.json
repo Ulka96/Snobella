@@ -3,8 +3,8 @@
     {
       "id": 1,
       "title": "Shoulder Bag Leather Bag Leather undertakes laborious physical physical ",
-      "discountedPrice": 130.0,
-      "price": 340.0,
+      "discountedPrice": 130,
+      "price": 340,
       "new": true,
       "fav": false,
       "discount": 0,
@@ -12,30 +12,39 @@
       "featured-products": true,
       "discount-products": false,
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "categoryId": 4,
-      "materialId": 1,
-      "colorId": 1,
+      "categoryId": "4",
+      "materialId": "1",
+      "colorId": "1",
+      "sizeId": "1",
       "image": "https://s3-alpha-sig.figma.com/img/7529/9645/5652baba89f40da1967f408bcdb1ee23?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A72~f2iv61PE11JF9a8Do0dn2IEtZ5iZo8HcMyMhLN40GRTzF6BTOYNWr1SZrxroLFYgHrvFvA9IDB8Yn9r9jq6oBA7G-5sh5w117LQ3Vsnb-5u5MzWKu5U~mR2P774UB3jlVYFeJVW1di1-IHSU5pM8u8-wP6E-sEn-bNMZlnTt8YiJ93V8mKRP6NoamAqIH4-AxFCU6SP0cwlVo4riIUJT1gOwuu4HxO9YZLW2k~b7GQFgpS0CjdBGdMTd9-TMnBCbX2Cu-ZsjCb7spZRJBIDa1AQ4ODZi-kr3E2nRRC0iuNxkN9XhHQiikkNmVhsUedwOj9hLh6Z5l93d9DlxXg__",
       "rating": {
         "rate": 5,
         "count": 120
-      }
+      },
+      "comments": [
+        {
+          "commentOwner": "Ulkar",
+          "comment" : "Salam",
+          "commentId" : 1
+        }
+      ]
     },
     {
       "id": 2,
       "title": "Shoulder Bag Leather Bag Leather undertakes laborious physical physical ",
-      "discountedPrice": 130.0,
-      "price": 340.0,
+      "discountedPrice": 130,
+      "price": 340,
       "new": false,
       "fav": true,
       "discount": 30,
       "best-sellers": false,
       "featured-products": true,
       "discount-products": false,
-      "colorId": 2,
+      "colorId": "2",
       "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-      "categoryId": 5,
-      "materialId": 2,
+      "categoryId": "5",
+      "materialId": "2",
+      "sizeId": "1",
       "image": "https://s3-alpha-sig.figma.com/img/b839/a54f/f97d06f597194b320a854d249de3f8ac?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IgMJnkrE2lEHmBzgcDDgbEY94ovam54bl~SrpJZfbTrJNKLJdY4Y~08Gw~4JvbviRDDb-ARRg8rH5Dj5NTUGYpOGc6b7EccG9HcTl-HX1GJ7OUzvb0J5dm3Os0YJZHJw1GDo6DJbooJf3~Bm7lo2xgzMriGo3UClaGP88fhbjl1r~2droo9SxSAhUvw5cmyZM3zB7YJewWo8nIPNgWgX-UXIA95aWiQeB6SxP9LTObCnyM~D8axMKhYB3S1Iycp36NBpLt2wUwD8aqsZtAjjXNGVIxh38U3lxs2gsLjuM0kHcykx6Jpxnsx-dUYhgKh65QyZ80M8wP-IiN~Oc~Z7UQ__",
       "rating": {
         "rate": 4.1,
@@ -45,40 +54,41 @@
     {
       "id": 3,
       "title": "Shoulder Bag Leather Bag Leather undertakes laborious physical physical ",
-      "discountedPrice": 70.0,
-      "price": 140.0,
+      "discountedPrice": 70,
+      "price": 140,
       "new": false,
       "fav": false,
       "discount": 0,
       "best-sellers": false,
       "featured-products": true,
       "discount-products": false,
-      "colorId": 2,
+      "colorId": "2",
       "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-      "categoryId": 3,
-      "materialId": 3,
+      "categoryId": "3",
+      "materialId": "3",
+      "sizeId": "1",
       "image": "https://s3-alpha-sig.figma.com/img/7e36/d36c/a8e5ab4f394eb2a692448af3ddc993cb?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yi3n5dCyZjwP7-GVrJrVQYvWvfNAA44ZWKHXN5CGIRWDKcnyz18zeJPSsqWwwDZt4zpbcDE2490VjuHHXZwehXaHb6gwh7sY-kPmRrpf~75OG2RkzRFpYQDN2Hs3mlEPgT8nQfmU~Q91E7M5dCp8DyT67KRdm-aQCbI0M4K1VAWqiJoZHbBSCmko5IkPmVCarGgVZuKwa84gKEs2wlaT~Ng0Ad2Aat0Ei7NFLNyOGOtJIqb4cLDjnxBG7i78F~1OOGUcVq7WXzBKs~VAsyannglP6VGVf9tzUOuMMYtxJoNxFVSwDFAM65fBJWzR-5RjMzzrS2bcaaJ2p~YCU~LMPQ__",
       "rating": {
         "rate": 4.7,
         "count": 500
       }
     },
-
     {
       "id": 4,
       "title": "Shoulder Bag Leather Bag Leather undertakes laborious physical physical ",
-      "discountedPrice": 260.0,
-      "price": 440.0,
+      "discountedPrice": 260,
+      "price": 440,
       "new": true,
       "fav": false,
       "discount": 0,
       "best-sellers": true,
       "featured-products": false,
       "discount-products": false,
-      "colorId": 3,
+      "colorId": "3",
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "categoryId": 2,
-      "materialId": 3,
+      "categoryId": "2",
+      "materialId": "3",
+      "sizeId": "1",
       "image": "https://s3-alpha-sig.figma.com/img/cf5c/fc2a/4a396c2ed86b4dc2ff22aa5852410d53?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=C~Gr2qH3wH2sK3GKs3O9ie~LeEE0L~kHJedW1ctKmfBEkbPgFG-F1qYw6mHyA9qQsFN1lKWNTZ0cns92oT2NduX7H-JNd41mRRgvK6ht2t1vpl4~i3SOtLz4gcqQ5dsrSE~jmBhYOr9i1Ic~-2z81C5tygIp9u-nfVszQGs7jTUzKWkXD9shKryN~gWpmJs0pKKyYvlvZ70aSF9MzO1fY75fBjz6To91IwQEyGAcp1eFmM3unBCx9izHUvefB-LSU5CLOzbGaz2iO5LzDc-2tG9gDUthe6Clthos0F49X80FubcKXVccfoE2opsa6mQU4nVN9WBUVUgo1qmddev3Vw__",
       "rating": {
         "rate": 5,
@@ -88,18 +98,19 @@
     {
       "id": 5,
       "title": "Shoulder Bag Leather Bag Leather undertakes laborious physical physical ",
-      "discountedPrice": 130.0,
-      "price": 340.0,
+      "discountedPrice": 130,
+      "price": 340,
       "new": false,
       "fav": true,
       "discount": 30,
       "best-sellers": true,
       "featured-products": false,
       "discount-products": false,
-      "colorId": 3,
+      "colorId": "3",
       "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-      "categoryId": 4,
-      "materialId": 1,
+      "categoryId": "4",
+      "materialId": "1",
+      "sizeId": "2",
       "image": "https://s3-alpha-sig.figma.com/img/3e0e/f0f0/62223108bce29cbb88fecbc3e5cf7f1a?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NQIynLlkGLmdyUacogWIAl7FzfFI7anWplkOk7NxMSUWEu5kef2rvUP56mHdyDxsBWM1ZTR7NdfQ4qS8L2chfXQBZ6vQ-nIEXAoygqNL9VRsyBY1GahlZNiwQJuNltjfrmlq794buFXU65C8FhfpvLyY9-TcjArnBKBrzl2Y0PP3GdxG8z3ivH4rh6VxJmKIHvcFKGXO71dyMFWrLoZtSiYb1ZSbapwl5bSDTf4bzIiDxzSxZP7rmWcuYYp9xlCVfUc39m3pha8J-CKtQFUCgDVH3fBJAsfYpT6d0aHh9nWwdc~SBDpBpevl3jqBJKpUUY0IzmpvVpUrkuuf6uH72Q__",
       "rating": {
         "rate": 4.1,
@@ -109,40 +120,41 @@
     {
       "id": 6,
       "title": "Shoulder Bag Leather Bag Leather undertakes laborious physical physical ",
-      "discountedPrice": 130.0,
-      "price": 340.0,
+      "discountedPrice": 130,
+      "price": 340,
       "new": false,
       "fav": false,
       "discount": 0,
       "best-sellers": true,
       "featured-products": false,
       "discount-products": false,
-      "colorId": 4,
+      "colorId": "4",
       "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-      "categoryId": 1,
-      "materialId": 4,
+      "categoryId": "1",
+      "materialId": "4",
+      "sizeId": "2",
       "image": "https://s3-alpha-sig.figma.com/img/3bf4/9f6f/fdb1dc0fcecdc64b53c6dd0bdac4b7db?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G-ro5UuRpoDsO5v3NLFNPgMN~-UFmOPY3oTwe0BW7IJLIQYIRqWyWoXzo0CW~mvduFPa3UD6cf1HS3UGq0OWv0-o2y8KL7EgBPXZxugX1Ac6~vh~9ulxqTgb5YSK5f1w28FFrlYx2ZrmQK7B8D814YeTCmwM7H~SJv1wrmckcLafgoa9~yWR6yk6eLNOiTXPyf5SZ8Z77Lc5puVwmnKc8h1JqHYg~ReG29090qKrAOXRMAV0t0m6wPl~1nkhmEzi61CxFPWSqe247PGW38lLUUbkBp8vN8xoVYyhfj4uq2NlR0hOfdKG1N0nTSTNP1uLm5m-lnmxbEJXyf5rpZqu8w__",
       "rating": {
         "rate": 4.7,
         "count": 500
       }
     },
-
     {
       "id": 7,
       "title": "Shoulder Bag Leather Bag Leather undertakes laborious physical physical ",
-      "discountedPrice": 130.0,
-      "price": 340.0,
+      "discountedPrice": 130,
+      "price": 340,
       "new": true,
       "fav": false,
       "discount": 0,
       "best-sellers": false,
       "featured-products": false,
       "discount-products": true,
-      "colorId": 5,
+      "colorId": "5",
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "categoryId": 4,
-      "materialId": 4,
+      "categoryId": "4",
+      "materialId": "4",
+      "sizeId": "2",
       "image": "https://s3-alpha-sig.figma.com/img/7529/9645/5652baba89f40da1967f408bcdb1ee23?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A72~f2iv61PE11JF9a8Do0dn2IEtZ5iZo8HcMyMhLN40GRTzF6BTOYNWr1SZrxroLFYgHrvFvA9IDB8Yn9r9jq6oBA7G-5sh5w117LQ3Vsnb-5u5MzWKu5U~mR2P774UB3jlVYFeJVW1di1-IHSU5pM8u8-wP6E-sEn-bNMZlnTt8YiJ93V8mKRP6NoamAqIH4-AxFCU6SP0cwlVo4riIUJT1gOwuu4HxO9YZLW2k~b7GQFgpS0CjdBGdMTd9-TMnBCbX2Cu-ZsjCb7spZRJBIDa1AQ4ODZi-kr3E2nRRC0iuNxkN9XhHQiikkNmVhsUedwOj9hLh6Z5l93d9DlxXg__",
       "rating": {
         "rate": 5,
@@ -152,18 +164,19 @@
     {
       "id": 8,
       "title": "Shoulder Bag Leather Bag Leather undertakes laborious physical physical ",
-      "discountedPrice": 130.0,
-      "price": 340.0,
+      "discountedPrice": 130,
+      "price": 340,
       "new": false,
       "fav": true,
       "discount": 30,
       "best-sellers": false,
       "featured-products": false,
       "discount-products": true,
-      "colorId": 6,
+      "colorId": "6",
       "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-      "categoryId": 6,
-      "materialId": 5,
+      "categoryId": "6",
+      "materialId": "5",
+      "sizeId": "2",
       "image": "https://s3-alpha-sig.figma.com/img/7e36/d36c/a8e5ab4f394eb2a692448af3ddc993cb?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yi3n5dCyZjwP7-GVrJrVQYvWvfNAA44ZWKHXN5CGIRWDKcnyz18zeJPSsqWwwDZt4zpbcDE2490VjuHHXZwehXaHb6gwh7sY-kPmRrpf~75OG2RkzRFpYQDN2Hs3mlEPgT8nQfmU~Q91E7M5dCp8DyT67KRdm-aQCbI0M4K1VAWqiJoZHbBSCmko5IkPmVCarGgVZuKwa84gKEs2wlaT~Ng0Ad2Aat0Ei7NFLNyOGOtJIqb4cLDjnxBG7i78F~1OOGUcVq7WXzBKs~VAsyannglP6VGVf9tzUOuMMYtxJoNxFVSwDFAM65fBJWzR-5RjMzzrS2bcaaJ2p~YCU~LMPQ__",
       "rating": {
         "rate": 4.1,
@@ -173,18 +186,19 @@
     {
       "id": 9,
       "title": "Shoulder Bag Leather Bag Leather undertakes laborious physical physical ",
-      "discountedPrice": 130.0,
-      "price": 340.0,
+      "discountedPrice": 130,
+      "price": 340,
       "new": false,
       "fav": false,
       "discount": 0,
       "best-sellers": false,
       "featured-products": false,
       "discount-products": true,
-      "colorId": 1,
+      "colorId": "1",
       "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-      "categoryId": 6,
-      "materialId": 5,
+      "categoryId": "6",
+      "materialId": "5",
+      "sizeId": "3",
       "image": "https://s3-alpha-sig.figma.com/img/7529/9645/5652baba89f40da1967f408bcdb1ee23?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A72~f2iv61PE11JF9a8Do0dn2IEtZ5iZo8HcMyMhLN40GRTzF6BTOYNWr1SZrxroLFYgHrvFvA9IDB8Yn9r9jq6oBA7G-5sh5w117LQ3Vsnb-5u5MzWKu5U~mR2P774UB3jlVYFeJVW1di1-IHSU5pM8u8-wP6E-sEn-bNMZlnTt8YiJ93V8mKRP6NoamAqIH4-AxFCU6SP0cwlVo4riIUJT1gOwuu4HxO9YZLW2k~b7GQFgpS0CjdBGdMTd9-TMnBCbX2Cu-ZsjCb7spZRJBIDa1AQ4ODZi-kr3E2nRRC0iuNxkN9XhHQiikkNmVhsUedwOj9hLh6Z5l93d9DlxXg__",
       "rating": {
         "rate": 4.7,
@@ -194,18 +208,19 @@
     {
       "id": 10,
       "title": "Shoulder Bag Leather Bag Leather undertakes laborious physical physical ",
-      "discountedPrice": 130.0,
-      "price": 340.0,
+      "discountedPrice": 130,
+      "price": 340,
       "new": false,
       "fav": false,
       "discount": 0,
       "best-sellers": false,
       "featured-products": false,
       "discount-products": true,
-      "colorId": 7,
+      "colorId": "7",
       "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-      "categoryId": 5,
-      "materialId": 3,
+      "categoryId": "5",
+      "materialId": "3",
+      "sizeId": "2",
       "image": "https://s3-alpha-sig.figma.com/img/7529/9645/5652baba89f40da1967f408bcdb1ee23?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A72~f2iv61PE11JF9a8Do0dn2IEtZ5iZo8HcMyMhLN40GRTzF6BTOYNWr1SZrxroLFYgHrvFvA9IDB8Yn9r9jq6oBA7G-5sh5w117LQ3Vsnb-5u5MzWKu5U~mR2P774UB3jlVYFeJVW1di1-IHSU5pM8u8-wP6E-sEn-bNMZlnTt8YiJ93V8mKRP6NoamAqIH4-AxFCU6SP0cwlVo4riIUJT1gOwuu4HxO9YZLW2k~b7GQFgpS0CjdBGdMTd9-TMnBCbX2Cu-ZsjCb7spZRJBIDa1AQ4ODZi-kr3E2nRRC0iuNxkN9XhHQiikkNmVhsUedwOj9hLh6Z5l93d9DlxXg__",
       "rating": {
         "rate": 4.7,
@@ -213,120 +228,148 @@
       }
     }
   ],
-
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Shoulder bags",
       "coverImage": "https://s3-alpha-sig.figma.com/img/b839/a54f/f97d06f597194b320a854d249de3f8ac?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IgMJnkrE2lEHmBzgcDDgbEY94ovam54bl~SrpJZfbTrJNKLJdY4Y~08Gw~4JvbviRDDb-ARRg8rH5Dj5NTUGYpOGc6b7EccG9HcTl-HX1GJ7OUzvb0J5dm3Os0YJZHJw1GDo6DJbooJf3~Bm7lo2xgzMriGo3UClaGP88fhbjl1r~2droo9SxSAhUvw5cmyZM3zB7YJewWo8nIPNgWgX-UXIA95aWiQeB6SxP9LTObCnyM~D8axMKhYB3S1Iycp36NBpLt2wUwD8aqsZtAjjXNGVIxh38U3lxs2gsLjuM0kHcykx6Jpxnsx-dUYhgKh65QyZ80M8wP-IiN~Oc~Z7UQ__"
     },
-
     {
-      "id": 2,
+      "id": "2",
       "title": "Hand bag",
       "coverImage": "https://s3-alpha-sig.figma.com/img/cf5c/fc2a/4a396c2ed86b4dc2ff22aa5852410d53?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=C~Gr2qH3wH2sK3GKs3O9ie~LeEE0L~kHJedW1ctKmfBEkbPgFG-F1qYw6mHyA9qQsFN1lKWNTZ0cns92oT2NduX7H-JNd41mRRgvK6ht2t1vpl4~i3SOtLz4gcqQ5dsrSE~jmBhYOr9i1Ic~-2z81C5tygIp9u-nfVszQGs7jTUzKWkXD9shKryN~gWpmJs0pKKyYvlvZ70aSF9MzO1fY75fBjz6To91IwQEyGAcp1eFmM3unBCx9izHUvefB-LSU5CLOzbGaz2iO5LzDc-2tG9gDUthe6Clthos0F49X80FubcKXVccfoE2opsa6mQU4nVN9WBUVUgo1qmddev3Vw__"
     },
-
     {
-      "id": 3,
+      "id": "3",
       "title": "Backpack",
       "coverImage": "https://s3-alpha-sig.figma.com/img/7529/9645/5652baba89f40da1967f408bcdb1ee23?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A72~f2iv61PE11JF9a8Do0dn2IEtZ5iZo8HcMyMhLN40GRTzF6BTOYNWr1SZrxroLFYgHrvFvA9IDB8Yn9r9jq6oBA7G-5sh5w117LQ3Vsnb-5u5MzWKu5U~mR2P774UB3jlVYFeJVW1di1-IHSU5pM8u8-wP6E-sEn-bNMZlnTt8YiJ93V8mKRP6NoamAqIH4-AxFCU6SP0cwlVo4riIUJT1gOwuu4HxO9YZLW2k~b7GQFgpS0CjdBGdMTd9-TMnBCbX2Cu-ZsjCb7spZRJBIDa1AQ4ODZi-kr3E2nRRC0iuNxkN9XhHQiikkNmVhsUedwOj9hLh6Z5l93d9DlxXg__"
     },
-
     {
-      "id": 4,
+      "id": "4",
       "title": "Evenings bags",
       "coverImage": "https://s3-alpha-sig.figma.com/img/3bf4/9f6f/fdb1dc0fcecdc64b53c6dd0bdac4b7db?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G-ro5UuRpoDsO5v3NLFNPgMN~-UFmOPY3oTwe0BW7IJLIQYIRqWyWoXzo0CW~mvduFPa3UD6cf1HS3UGq0OWv0-o2y8KL7EgBPXZxugX1Ac6~vh~9ulxqTgb5YSK5f1w28FFrlYx2ZrmQK7B8D814YeTCmwM7H~SJv1wrmckcLafgoa9~yWR6yk6eLNOiTXPyf5SZ8Z77Lc5puVwmnKc8h1JqHYg~ReG29090qKrAOXRMAV0t0m6wPl~1nkhmEzi61CxFPWSqe247PGW38lLUUbkBp8vN8xoVYyhfj4uq2NlR0hOfdKG1N0nTSTNP1uLm5m-lnmxbEJXyf5rpZqu8w__"
     },
-
     {
-      "id": 5,
+      "id": "5",
       "title": "Belt Bags",
       "coverImage": "https://s3-alpha-sig.figma.com/img/3bf4/9f6f/fdb1dc0fcecdc64b53c6dd0bdac4b7db?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G-ro5UuRpoDsO5v3NLFNPgMN~-UFmOPY3oTwe0BW7IJLIQYIRqWyWoXzo0CW~mvduFPa3UD6cf1HS3UGq0OWv0-o2y8KL7EgBPXZxugX1Ac6~vh~9ulxqTgb5YSK5f1w28FFrlYx2ZrmQK7B8D814YeTCmwM7H~SJv1wrmckcLafgoa9~yWR6yk6eLNOiTXPyf5SZ8Z77Lc5puVwmnKc8h1JqHYg~ReG29090qKrAOXRMAV0t0m6wPl~1nkhmEzi61CxFPWSqe247PGW38lLUUbkBp8vN8xoVYyhfj4uq2NlR0hOfdKG1N0nTSTNP1uLm5m-lnmxbEJXyf5rpZqu8w__"
     },
-
     {
-      "id": 6,
+      "id": "6",
       "title": "Postman bag",
       "coverImage": "https://s3-alpha-sig.figma.com/img/3bf4/9f6f/fdb1dc0fcecdc64b53c6dd0bdac4b7db?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G-ro5UuRpoDsO5v3NLFNPgMN~-UFmOPY3oTwe0BW7IJLIQYIRqWyWoXzo0CW~mvduFPa3UD6cf1HS3UGq0OWv0-o2y8KL7EgBPXZxugX1Ac6~vh~9ulxqTgb5YSK5f1w28FFrlYx2ZrmQK7B8D814YeTCmwM7H~SJv1wrmckcLafgoa9~yWR6yk6eLNOiTXPyf5SZ8Z77Lc5puVwmnKc8h1JqHYg~ReG29090qKrAOXRMAV0t0m6wPl~1nkhmEzi61CxFPWSqe247PGW38lLUUbkBp8vN8xoVYyhfj4uq2NlR0hOfdKG1N0nTSTNP1uLm5m-lnmxbEJXyf5rpZqu8w__"
     }
   ],
-
   "materials": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Cloth"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Cotton"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Denim - Jeans"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Exotic Leathers"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Faux Fur"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Glitter"
     }
   ],
-
   "sizes": [
     {
-      "id": 1,
+      "id": "1",
       "title": "XS"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "S"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "M"
     }
   ],
-
   "colors": [
     {
-      "id": 1,
+      "id": "1",
       "title": "275240"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "773838"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "000000"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "D6B73B"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "3D2A33"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "895C31"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "7C4DFF"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "F75145"
     }
-
+  ],
+  "users": [
+    {
+      "id": "0.15443361001987532",
+      "userName": "ulkar",
+      "password": "123456789",
+      "email": "ulkarragh@code.edu.az"
+    },
+    {
+      "id": "0.5260947202260822",
+      "userName": "ulkar96",
+      "password": "123456789",
+      "email": "ulkar@email.com"
+    },
+    {
+      "id": "0.877428094687088",
+      "userName": "salam",
+      "password": "123456789",
+      "email": "qurban@code.edu.az"
+    },
+    {
+      "id": "0.3364277763449883",
+      "userName": "fereh",
+      "password": "123456789",
+      "email": "fereh@mail.com"
+    },
+    {
+      "id": "0.32537851306986343",
+      "userName": "elgun",
+      "password": "123456789",
+      "email": "elgun@mail.com"
+    },
+    {
+      "id": "0.22314926434020554",
+      "userName": "elmir",
+      "password": "123456789",
+      "email": "elmir@gmail.com"
+    }
   ]
 }

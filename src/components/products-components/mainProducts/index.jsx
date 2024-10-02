@@ -10,6 +10,8 @@ const MainProducts = ({ setCount }) => {
   const categoryId = useSelector((state) => state.filter.categoryId);
   const materialId = useSelector((state) => state.filter.materialId);
   const colorId = useSelector((state) => state.filter.colorId)
+  const sizeId = useSelector((state) => state.filter.sizeId);
+
   const lowToHighSort = useSelector((state) => state.filter.lowToHighSort);
  const highToLowSort = useSelector((state) => state.filter.highToLowSort)
  const featured = useSelector((state) => state.filter.featured)
@@ -56,6 +58,10 @@ const MainProducts = ({ setCount }) => {
       );
     }
 
+    if (sizeId) {
+      filtered = filtered.filter((product) => product.sizeId === sizeId);
+    }
+
     if (lowToHighSort) {
       filtered = [...filtered].sort((a, b) => a.price - b.price);
     }
@@ -90,7 +96,7 @@ const MainProducts = ({ setCount }) => {
     
 
     setFilteredProducts(filtered);
-  }, [categoryId, materialId, colorId, mainProducts, featured,discounted, bestSeller, lowToHighSort, highToLowSort, lowPrice, highPrice]);
+  }, [categoryId, materialId, colorId,sizeId, mainProducts, featured,discounted, bestSeller, lowToHighSort, highToLowSort, lowPrice, highPrice]);
 
 
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 // React icons
@@ -21,29 +22,40 @@ const SingleProduct = (props) => {
   const productCount = useSelector((state) => state.cart.productCount)
   const customCart = useSelector((state) => state.cart.customCart)
 
+  const navigate = useNavigate()
 
-  const addToCartHandler = (id) => {
 
-    const foundProd = customCart.find((elem) => elem.id === id)
+ const addToCartHandler = (id) => {
+   
+    if(localStorage.getItem("isLogin")) {
+   const foundProd = customCart.find((elem) => elem.id === id);
 
-    if(foundProd) {
-       const newCart = customCart.map((elem) => {
-        if(elem.id === foundProd.id) {
-          elem.count = elem.count + 1
-        }
-        return elem;
-       })
+   if (foundProd) {
+     const newCart = customCart.map((elem) => {
+       if (elem.id === foundProd.id) {
+         return {
+           ...elem, // Spread the existing object to ensure immutability
+           count: elem.count + 1, // Update the count immutably
+         };
+       }
+       return elem;
+     });
 
-       dispatch(addToCart({customCart: newCart}))
-       console.log(newCart);
-    }
-    else {
+     dispatch(addToCart(newCart));
+     
+   } else {
+     dispatch(addToCart([...customCart, { id: id, count: 1 }]));
+   }  }
 
-      dispatch(addToCart([...customCart, {id:id, count: 1}]))
-    }
+   else {
+    navigate("/sign-in");
+   }
 
-    // const newCount = productCount+1 
-  }
+
+
+
+ };
+
 
 
 

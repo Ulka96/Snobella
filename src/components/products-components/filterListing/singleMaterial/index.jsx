@@ -16,7 +16,7 @@ const materialHandler = (id) => {
 
 
   return (
-    <li onClick= {() => materialHandler(material.id) }className={`cursor-pointer text-[16px] ${materialId === material.id ? "font-bold" : "font-normal"} text-[#212121E5]`}>
+    <li onClick= {() => materialHandler(material.id) } className={`cursor-pointer text-[16px] ${materialId === material.id ? "font-bold" : "font-normal"} text-[#212121E5]`}>
        {material.title}
     </li>
   

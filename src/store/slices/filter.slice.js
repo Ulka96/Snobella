@@ -18,10 +18,10 @@ const filterSlice = createSlice({
     discount: false,
     bestSeller: false,
 
-    lowPrice : 0,
-    highPrice : 0
-
+    lowPrice: 0,
+    highPrice: 0,
   },
+
   reducers: {
     setMaterial: (state, action) => {
       state.materialId = action.payload;
@@ -33,6 +33,10 @@ const filterSlice = createSlice({
 
     setColor: (state, action) => {
       state.colorId = action.payload;
+    },
+
+    setSize: (state, action) => {
+      state.sizeId = action.payload;
     },
 
     selectCategory: (state, action) => {
@@ -52,48 +56,49 @@ const filterSlice = createSlice({
       state.materialId = "";
       state.categoryId = "";
       state.selectedCategoryIds = "";
+      state.colorId = "";
+      state.sizeId = "";
+
     },
 
     lowToHighSort: (state, action) => {
-      state.lowToHighSort = true
+      state.lowToHighSort = true;
       state.highToLowSort = false;
-      state.featured = false
-      state.bestSeller = false
-      state.discount = false
-      
+      state.featured = false;
+      state.bestSeller = false;
+      state.discount = false;
     },
 
     highToLowSort: (state, action) => {
-      state.highToLowSort = true
-      state.lowToHighSort = false
-      state.featured = false
-      state.bestSeller = false
-      state.discount = false
-    
+      state.highToLowSort = true;
+      state.lowToHighSort = false;
+      state.featured = false;
+      state.bestSeller = false;
+      state.discount = false;
     },
 
     featuredSort: (state, action) => {
-      state.featured = true
-      state.lowToHighSort = false
-      state.highToLowSort = false
-      state.bestSeller = false
-      state.discount = false
+      state.featured = true;
+      state.lowToHighSort = false;
+      state.highToLowSort = false;
+      state.bestSeller = false;
+      state.discount = false;
     },
 
     discountSort: (state, action) => {
-      state.discount = true
-      state.featured = false
-      state.bestSeller = false
-      state.lowToHighSort = false
-      state.highToLowSort = false
+      state.discount = true;
+      state.featured = false;
+      state.bestSeller = false;
+      state.lowToHighSort = false;
+      state.highToLowSort = false;
     },
 
     bestSellerSort: (state, action) => {
-      state.bestSeller = true
-      state.featured = false
-      state.discount = false
-      state.lowToHighSort = false
-      state.highToLowSort = false
+      state.bestSeller = true;
+      state.featured = false;
+      state.discount = false;
+      state.lowToHighSort = false;
+      state.highToLowSort = false;
     },
 
     priceFilter: (state, action) => {
@@ -101,7 +106,6 @@ const filterSlice = createSlice({
       state.lowPrice = lowPrice;
       state.highPrice = highPrice;
     },
-
   },
 });
 
@@ -111,6 +115,7 @@ export const {
   setMaterial,
   setCategory,
   setColor,
+  setSize,
   selectCategory,
   filterHandle,
   lowToHighSort,
