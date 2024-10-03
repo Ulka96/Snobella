@@ -91,11 +91,9 @@ const SingleProduct = (props) => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(data),
+          body: JSON.stringify(ratingSum),
         }
-        
       );
-       console.log(updateResponse);
 
       if (!updateResponse.ok) {
         throw new Error("Failed to update rating");
