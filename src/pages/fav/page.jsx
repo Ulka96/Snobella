@@ -1,14 +1,17 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React from "react";
+import { useSelector } from "react-redux";
+import SingleFav from "./singlefav";
 
 const FavPage = () => {
+  
+  const customFav = useSelector((state) => state.cart.customFav);
 
-    const customFav = useSelector((state) => state.cart.customFav)
-
-    console.log(customFav, "customFav")
   return (
-    <div>FavPage</div>
-  )
-}
+    <div>
+      {customFav &&
+        customFav.map((single) => <SingleFav single={single} />)}
+    </div>
+  );
+};
 
-export default FavPage
+export default FavPage;

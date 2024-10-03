@@ -20,6 +20,9 @@ const Products = () => {
       useEffect(() => {
         fetchProducts()
       }, [])
+
+
+
     
   
   return (
