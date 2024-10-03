@@ -14,6 +14,7 @@ import Container from "../../../components/common/containerClass"
 
 const SingleFav = ({single}) => {
 
+
     
   const customFav = useSelector((state) => state.cart.customFav);
   return (
@@ -35,7 +36,7 @@ const SingleFav = ({single}) => {
               <div className="py-[2px] px-[22px] bg-[#F9F9F9]"></div>
             )}
             {/* Conditionally render the heart icon based on whether the product is in customFav */}
-            <div onClick={() => addToFavHandler(single?.product)}>
+            <div >
               {customFav.includes(single?.product) ? (
                 <TiHeartFullOutline className="w-[22px] h-[22px] text-red-500 cursor-pointer" />
               ) : (

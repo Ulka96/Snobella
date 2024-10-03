@@ -51,7 +51,7 @@
       "sizeId": "1",
       "image": "https://s3-alpha-sig.figma.com/img/b839/a54f/f97d06f597194b320a854d249de3f8ac?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IgMJnkrE2lEHmBzgcDDgbEY94ovam54bl~SrpJZfbTrJNKLJdY4Y~08Gw~4JvbviRDDb-ARRg8rH5Dj5NTUGYpOGc6b7EccG9HcTl-HX1GJ7OUzvb0J5dm3Os0YJZHJw1GDo6DJbooJf3~Bm7lo2xgzMriGo3UClaGP88fhbjl1r~2droo9SxSAhUvw5cmyZM3zB7YJewWo8nIPNgWgX-UXIA95aWiQeB6SxP9LTObCnyM~D8axMKhYB3S1Iycp36NBpLt2wUwD8aqsZtAjjXNGVIxh38U3lxs2gsLjuM0kHcykx6Jpxnsx-dUYhgKh65QyZ80M8wP-IiN~Oc~Z7UQ__",
       "rating": {
-        "rate": 4.1,
+        "rate": 4.113766476817164,
         "count": 259
       }
     },
@@ -195,8 +195,8 @@
       "sizeId": "2",
       "image": "https://s3-alpha-sig.figma.com/img/7e36/d36c/a8e5ab4f394eb2a692448af3ddc993cb?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yi3n5dCyZjwP7-GVrJrVQYvWvfNAA44ZWKHXN5CGIRWDKcnyz18zeJPSsqWwwDZt4zpbcDE2490VjuHHXZwehXaHb6gwh7sY-kPmRrpf~75OG2RkzRFpYQDN2Hs3mlEPgT8nQfmU~Q91E7M5dCp8DyT67KRdm-aQCbI0M4K1VAWqiJoZHbBSCmko5IkPmVCarGgVZuKwa84gKEs2wlaT~Ng0Ad2Aat0Ei7NFLNyOGOtJIqb4cLDjnxBG7i78F~1OOGUcVq7WXzBKs~VAsyannglP6VGVf9tzUOuMMYtxJoNxFVSwDFAM65fBJWzR-5RjMzzrS2bcaaJ2p~YCU~LMPQ__",
       "rating": {
-        "rate": 4.1,
-        "count": 259
+        "rate": 4.120531618215505,
+        "count": 262
       }
     },
     {
@@ -219,7 +219,7 @@
       "sizeId": "3",
       "image": "https://s3-alpha-sig.figma.com/img/7529/9645/5652baba89f40da1967f408bcdb1ee23?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A72~f2iv61PE11JF9a8Do0dn2IEtZ5iZo8HcMyMhLN40GRTzF6BTOYNWr1SZrxroLFYgHrvFvA9IDB8Yn9r9jq6oBA7G-5sh5w117LQ3Vsnb-5u5MzWKu5U~mR2P774UB3jlVYFeJVW1di1-IHSU5pM8u8-wP6E-sEn-bNMZlnTt8YiJ93V8mKRP6NoamAqIH4-AxFCU6SP0cwlVo4riIUJT1gOwuu4HxO9YZLW2k~b7GQFgpS0CjdBGdMTd9-TMnBCbX2Cu-ZsjCb7spZRJBIDa1AQ4ODZi-kr3E2nRRC0iuNxkN9XhHQiikkNmVhsUedwOj9hLh6Z5l93d9DlxXg__",
       "rating": {
-        "rate": 4.7,
+        "rate": 4.700598802395209,
         "count": 500
       }
     },
@@ -243,12 +243,11 @@
       "sizeId": "2",
       "image": "https://s3-alpha-sig.figma.com/img/7529/9645/5652baba89f40da1967f408bcdb1ee23?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A72~f2iv61PE11JF9a8Do0dn2IEtZ5iZo8HcMyMhLN40GRTzF6BTOYNWr1SZrxroLFYgHrvFvA9IDB8Yn9r9jq6oBA7G-5sh5w117LQ3Vsnb-5u5MzWKu5U~mR2P774UB3jlVYFeJVW1di1-IHSU5pM8u8-wP6E-sEn-bNMZlnTt8YiJ93V8mKRP6NoamAqIH4-AxFCU6SP0cwlVo4riIUJT1gOwuu4HxO9YZLW2k~b7GQFgpS0CjdBGdMTd9-TMnBCbX2Cu-ZsjCb7spZRJBIDa1AQ4ODZi-kr3E2nRRC0iuNxkN9XhHQiikkNmVhsUedwOj9hLh6Z5l93d9DlxXg__",
       "rating": {
-        "rate": 4.7,
+        "rate": 4.702388047832536,
         "count": 500
       }
     }
   ],
-
   "categories": [
     {
       "id": "1",
@@ -384,6 +383,24 @@
       "userName": "elvin",
       "password": "123456789",
       "email": "elvin@gmail.com"
+    },
+    {
+      "id": "0.10920434449158112",
+      "userName": "sahib",
+      "password": "123456789",
+      "email": "sahib@gmail.com"
+    },
+    {
+      "id": "0.15592333264014346",
+      "userName": "konul",
+      "password": "123456789",
+      "email": "konul@gmail.com"
+    },
+    {
+      "id": "0.7556155051716458",
+      "userName": "said",
+      "password": "123456789",
+      "email": "said@gmail.com"
     }
   ]
 }
