@@ -13,9 +13,7 @@ import { useSelector, useDispatch } from "react-redux";
 // Actions
 import { addToCart, addToFav } from "../../../store/slices/cart.slice";
 
-
-const SingleProduct = ({product}) => {
-
+const SingleProduct = ({ product }) => {
   const dispatch = useDispatch();
   const customCart = useSelector((state) => state.cart.customCart);
   const customFav = useSelector((state) => state.cart.customFav);
@@ -28,7 +26,8 @@ const SingleProduct = ({product}) => {
 
   // Check if the user has already rated this product
   useEffect(() => {
-    const ratedProducts = JSON.parse(localStorage.getItem("ratedProducts")) || [];
+    const ratedProducts =
+      JSON.parse(localStorage.getItem("ratedProducts")) || [];
     if (ratedProducts.includes(product.id)) {
       setHasRated(true); // User has already rated
     }
@@ -63,35 +62,28 @@ const SingleProduct = ({product}) => {
     }
   };
 
+  // Fav
+const addToFavHandler = (product) => {
+  let newFav; 
 
-  // Fav 
-  const addToFavHandler = (product) => {
-    let newFav = [];
+  const foundProd = customFav.find((elem) => elem === product); 
 
-    const foundProd = customFav.find((elem) => elem === product);
+  if (foundProd) {
+    newFav = customFav.filter((elem) => elem !== product); 
+  } else {
+    newFav = [...customFav, product]; 
+  }
 
-    if (foundProd) {
-      newFav = customFav.filter((elem) => elem !== product); // Remove product if it's already favorited
-    } else {
-      newFav = [...customFav, product]; // Add product if it's not favorited
-    }
+  dispatch(addToFav(newFav)); 
 
-    dispatch(addToFav(newFav));
+  console.log(newFav)
 
-    // Save the updated customFav to localStorage
-    localStorage.setItem("customFav", JSON.stringify(newFav));
+  localStorage.setItem("customFav", JSON.stringify(newFav));
+};
 
-    console.log(newFav)
-  };
-  
 
-  const stars = [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
-    { id: 5 },
-  ];
+
+  const stars = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
 
   // Open the rating modal only if the user is signed in and hasn't rated the product yet
   const handleRatingClick = () => {
@@ -112,29 +104,36 @@ const SingleProduct = ({product}) => {
   // Handle rating submission
   const submitRating = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/products/${product.id}`);
+      const response = await fetch(
+        `http://localhost:3000/products/${product.id}`
+      );
       const data = await response.json();
 
-      const newRating = (data.rating.rate * data.rating.count + selectedRating) / (data.rating.count + 1);
+      const newRating =
+        (data.rating.rate * data.rating.count + selectedRating) /
+        (data.rating.count + 1);
       const newCount = data.rating.count + 1; // Increment the count by 1
 
       // Create an updated product object with the new rating and updated count
-    const updatedProduct = {
-      ...data,
-      rating: {
-        ...data.rating,
-        rate: newRating,
-        count: newCount, // Update the count as well
-      },
-    };
-
-      const updateResponse = await fetch(`http://localhost:3000/products/${product.id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
+      const updatedProduct = {
+        ...data,
+        rating: {
+          ...data.rating,
+          rate: newRating,
+          count: newCount, // Update the count as well
         },
-        body: JSON.stringify(updatedProduct),
-      });
+      };
+
+      const updateResponse = await fetch(
+        `http://localhost:3000/products/${product.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedProduct),
+        }
+      );
 
       if (!updateResponse.ok) {
         throw new Error("Failed to update rating");
@@ -144,7 +143,8 @@ const SingleProduct = ({product}) => {
       console.log("Updated product rating:", updatedData);
 
       // Save the product ID to localStorage to mark it as rated
-      const ratedProducts = JSON.parse(localStorage.getItem("ratedProducts")) || [];
+      const ratedProducts =
+        JSON.parse(localStorage.getItem("ratedProducts")) || [];
       ratedProducts.push(product.id);
       localStorage.setItem("ratedProducts", JSON.stringify(ratedProducts));
 
@@ -173,21 +173,23 @@ const SingleProduct = ({product}) => {
         )}
         {/* Conditionally render the heart icon based on whether the product is in customFav */}
         <div onClick={() => addToFavHandler(product)}>
-      {customFav.includes(product) ? (
-        <TiHeartFullOutline className="w-[22px] h-[22px] text-red-500 cursor-pointer" />
-      ) : (
-        <IoIosHeartEmpty className="w-[22px] h-[22px] text-red-500 cursor-pointer" />
-      )}
-    </div>
+          {customFav.includes(product) ? (
+            <TiHeartFullOutline className="w-[22px] h-[22px] text-red-500 cursor-pointer" />
+          ) : (
+            <IoIosHeartEmpty className="w-[22px] h-[22px] text-red-500 cursor-pointer" />
+          )}
+        </div>
       </div>
 
       <div className="w-[218px] h-[243px] mx-auto">
         <img src={product?.image} alt="laptopbag" />
       </div>
 
-
       <div>
-        <div className="w-[94px] h-[14px] flex flex-row gap-1" onClick={handleRatingClick}>
+        <div
+          className="w-[94px] h-[14px] flex flex-row gap-1"
+          onClick={handleRatingClick}
+        >
           {stars.map((star) => (
             <span key={star.id}>
               {star.id <= Math.round(product.rating.rate) ? (
@@ -201,10 +203,7 @@ const SingleProduct = ({product}) => {
 
         <p>{product.rating.rate.toFixed(1)}</p>
 
-
-        <h1 className="text-[16px] font-normal my-4">
-          {product?.title}
-        </h1>
+        <h1 className="text-[16px] font-normal my-4">{product?.title}</h1>
 
         <div className="flex flex-row gap-[18px] items-center">
           <p className="text-[24px] font-semibold text-[#F75145]">
